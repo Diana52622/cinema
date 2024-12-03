@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование билетов</title>
+    <link href="бронь билета.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Бронирование билетов</h1>
+        <form>
+            <label for="date">Выберите дату:</label>
+            <select id="date" required>
+                <option value="">-- Выберите дату --</option>
+                <option value="2024-11-12">12 Ноября </option>
+                <option value="2024-11-13">13 Ноября </option>
+                <option value="2024-11-14">14 Ноября </option>
+            </select>
+
+            <label for="movie">Выберите фильм:</label>
+            <select id="movie" required>
+                <option value="">-- Выберите фильм --</option>
+                <option value="movie1" data-showtimes='["10:00", "11:40"]'>Домовой</option>
+                <option value="movie2" data-showtimes='["13:40", "20:00"]'>Мастер и Маргарита</option>
+                <option value="movie3" data-showtimes='["16:20", "22:45"]'>Граф Монте-Кристо</option>
+            </select>
+
+            <label for="showtime">Выберите сеанс:</label>
+            <select id="showtime" required>
+                <option value="">-- Выберите сеанс --</option>
+                <option value="time1">10:00</option>
+                <option value="time2">11:40</option>
+                <option value="time2">13:40</option>
+                <option value="time2">16:20</option>
+                <option value="time2">20:00</option>
+                <option value="time3">22:45</option>
+            </select>
+
+            <label for="seats">Выберите места:</label>
+            <div class="seat-map" id="seatMap">
+                <div class="seat" data-seat="1" data-price="12">1</div>
+                <div class="seat" data-seat="2" data-price="12">2</div>
+                <div class="seat" data-seat="3" data-price="12">3</div>
+                <div class="seat" data-seat="4" data-price="12">4</div>
+                <div class="seat" data-seat="5" data-price="12">5</div>
+                <div class="seat" data-seat="6" data-price="12">6</div>
+                <div class="seat" data-seat="7" data-price="12">7</div>
+                <div class="seat" data-seat="8" data-price="12">8</div>
+                <div class="seat" data-seat="9" data-price="12">9</div>
+                <div class="seat" data-seat="10" data-price="12">10</div>
+                <div class="seat" data-seat="11" data-price="12">11</div>
+                <div class="seat" data-seat="12" data-price="12">12</div>
+                <div class="seat" data-seat="13" data-price="12">13</div>
+                <div class="seat" data-seat="14" data-price="12">14</div>
+                <div class="seat" data-seat="15" data-price="12">15</div>
+                <div class="seat" data-seat="16" data-price="12">16</div>
+                <div class="seat" data-seat="17" data-price="12">17</div>
+                <div class="seat" data-seat="18" data-price="12">18</div>
+                <div class="seat" data-seat="19" data-price="12">19</div>
+                <div class="seat" data-seat="20" data-price="12">20</div>
+            </div>
+
+            <input type="hidden" id="selectedSeats" name="selectedSeats">
+            <div class="price-info" id="priceInfo">Выбрано мест: 0, Общая сумма: 0 р</div>
+
+            <div class="button-container">
+                <button type="submit" class="reserve">Забронировать</button>
+                <button type="button" class="buy"><a href="купить билет.html">Купить билет</a></button>
+            </div>
+        </form>
+    </div>
+    <script src="бронь билета.js"></script>
+</body>
+</html>

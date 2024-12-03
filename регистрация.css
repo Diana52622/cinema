@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('фон.jpg'); 
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.form {
+    background-color: rgba(34, 34, 34, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+    max-width: 300px;
+    width: 90%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    transition: border 0.3s;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0; 
+}
+
+li {
+    display: inline;
+    margin: 0 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+a:hover {
+    color: red;
+    border-color: white;
+}

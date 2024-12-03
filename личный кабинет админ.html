@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет администратора</title>
+    <link href="личный кабинет админ.css"  rel="stylesheet"> 
+</head>
+<body>
+    <h1>Личный кабинет администратора</h1>
+
+    <div>
+        <h2>Управление фильмами</h2>
+        <label for="film-title">Название фильма:</label>
+        <input type="text" id="film-title" placeholder="Введите название фильма"><br>
+
+        <label for="film-genre">Жанр:</label>
+        <input type="text" id="film-genre" placeholder="Введите жанр фильма"><br>
+
+        <label for="film-description">Описание фильма:</label>
+        <textarea id="film-description" placeholder="Введите описание фильма"></textarea><br>
+
+        <label for="film-release-date">Дата выхода:</label>
+        <input type="date" id="film-release-date"><br>
+
+        <button onclick="addFilm()">Добавить фильм</button>
+    </div>
+
+    <div>
+        <h2>Управление бронированиями</h2>
+        <label for="booking-id">ID бронирования:</label>
+        <input type="text" id="booking-id" placeholder="Введите ID бронирования"><br>
+
+        <label for="booking-action">Действие:</label>
+        <select id="booking-action">
+            <option value="view">Просмотреть</option>
+            <option value="cancel">Отменить</option>
+        </select><br>
+
+        <button onclick="manageBooking()">Выполнить действие</button>
+    </div>
+
+    <div>
+        <h2>Изменение информации о пользователе</h2>
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" placeholder="Введите имя пользователя"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Введите email"><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" placeholder="Введите телефон"><br>
+
+        <button onclick="saveUserInfo()">Сохранить изменения</button>
+    </div>
+
+    <script>
+    function addFilm() {
+        const title = document.getElementById('film-title').value;
+        const genre = document.getElementById('film-genre').value;
+        const description = document.getElementById('film-description').value;
+        const releaseDate = document.getElementById('film-release-date').value;
+
+        alert(`Фильм добавлен:\nНазвание: ${title}\nЖанр: ${genre}\nОписание: ${description}\nДата выхода: ${releaseDate}`);
+    }
+
+    function manageBooking() {
+        const bookingId = document.getElementById('booking-id').value;
+        const action = document.getElementById('booking-action').value;
+
+        alert(`Действие выполнено:\nID бронирования: ${bookingId}\nДействие: ${action}`);
+    }
+
+    function saveUserInfo() {
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        alert(`Сохранено:\nИмя: ${username}\nEmail: ${email}\nТелефон: ${phone}`);
+    }
+    </script>
+
+</body>
+</html>
